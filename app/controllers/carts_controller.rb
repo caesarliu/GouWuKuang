@@ -12,14 +12,19 @@ class CartsController < ApplicationController
 
   # GET /carts/1
   # GET /carts/1.xml
-  def show
-    @cart = Cart.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @cart }
+ def show
+      begin
+        @cart = Cart.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        logger.error "Attempt to access invalid cart #{params[:id]}"
+        redirect_to store_index_url, :notice => 'Invalid cart'
+      else
+        respond_to do |format|
+          format.html # show.html.erb
+          format.xml { render :xml => @cart }
+        end
+      end
     end
-  end
 
   # GET /carts/new
   # GET /carts/new.xml
@@ -80,4 +85,5 @@ class CartsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end
