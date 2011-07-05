@@ -7,21 +7,6 @@
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
 	<style type="text/css">
-	
-	   .box{
-			width:40em;
-			background:#effce7 url(images/bottom-left.gif) no-repeat left bottom
-		}
-	   .box_outer{
-			background: url(images/bottom-right.gif) no-repeat right bottom
-		}
-		.box_inner{
-			background: url(images/top-left.gif) no-repeat left top
-		}
-		.box_room{
-			background: url(images/top-right.gif) no-repeat right top
-		}
-		
 	    #navi a
 	    {
 			display: block;
@@ -35,7 +20,7 @@
 			cursor: pointer;
 		}
 		
-		u1
+		#navi u1
 		{
 			padding: 0;
 			margin:0;
@@ -45,7 +30,7 @@
 			border-bottom: #77d dotted 5px;
 		}
 		
-		u1 li
+		#navi u1 li
 		{
 			
 			float: left;
@@ -70,19 +55,7 @@
             <a href="http://www..../contact">Contact</a>
             <br />
         </div>
-		<!--
-		<div id="navi">
-		    <p>test</p>
-			<!--
-			<u1>
-				<li><a>首页</a></li>
-			    <li><a>我的宝贝</a></li>
-				<li><a>好友的宝贝</a></li>
-				<li><a>宝贝库</a></li>
-			</u1>
-			
-		</div>
-		-->
+	
         <div id="main">
 			<div id="navi">
 			<u1>
@@ -93,12 +66,6 @@
 				
 			</u1>
 			</div>
-			  <!--
-				<a>首页</a>
-			    <a>我的宝贝</a>
-				<a>好友的宝贝</a>
-				<a>宝贝库</a>
-				-->
 			<div id="content">
             <%= yield %>
 			</div>
