@@ -157,6 +157,36 @@
 
 }
 
+#navi a
+ {
+			display: block;
+			font:  150% sans-serif;
+			color: #226;
+		}
+		
+		#navi a:hover {
+			color: white;
+			background: #226;
+			cursor: pointer;
+		}
+		
+		#navi u1
+		{
+			padding: 0;
+			margin:0;
+			float: left;
+            list-style: none;
+			width: 100%;
+			border-bottom: #77d dotted 5px;
+		}
+		
+		#navi u1 li
+		{
+			
+			float: left;
+			padding-right:1em;
+		}	   
+
 #side {
     float: left;
     padding-top: 1em;
