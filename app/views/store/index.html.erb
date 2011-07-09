@@ -1,3 +1,82 @@
+<script type='text/javascript'>
+ window.onload=function(){
+	addHotProductNode();
+	addPListToProductNode();
+	addDetailBoxToProductNode();
+ }
+ 
+ function addHotProductNode(){
+	var hpz_header = document.getElementById("hpz_header");
+    var introEl=document.createElement("div"); 
+	introEl.className="intro";
+	hpz_header.appendChild(introEl); 
+	var txtNode=document.createTextNode("最新产品"); 
+	introEl.appendChild(txtNode);
+ }
+ 
+ function addHeaderToProductNode(){
+	
+ }
+ 
+ function addPListToProductNode(){
+	var u1Node = document.createElement("u1");
+	u1Node.className = "productsList";
+	var productList = new Array("iphone1", "iphone2", "iphone3", "iphone4");
+	var productImgLinks = new Array("http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg",
+	"http://2e.zol-img.com.cn/product/64/294/ceAxYYKlyE9bg.jpg",
+	"http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg",
+	"http://2e.zol-img.com.cn/product/64/294/ceAxYYKlyE9bg.jpg");
+	for(var i=0; i<productList.length; i++ )
+	{
+		var liNode = document.createElement("li");
+		var linkNode = document.createElement("a");
+		var linkButton = new Button(linkNode, productImgLinks[i]);
+		var txtNode = document.createTextNode(productList[i]);
+		linkNode.appendChild(txtNode);
+		liNode.appendChild(linkNode);
+		u1Node.appendChild(liNode);
+	}
+	
+	var hpz_main = document.getElementById("hpz_main");
+	hpz_main.appendChild(u1Node);
+	
+ }
+ 
+ function addDetailBoxToProductNode(){
+	var detaiNode = document.createElement("div");
+	detaiNode.className = "detail";
+	var imageNode = document.createElement("img");
+	imageNode.id = "detailImage";
+	imageNode.src = "http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg";
+	detaiNode.appendChild(imageNode);
+	var hpz_main = document.getElementById("hpz_main");
+	hpz_main.appendChild(detaiNode);
+	
+ }
+ 
+ function Button(element, imageLink)
+ {
+	this.element = element;
+	this.imageLink = imageLink;
+	this.element.buttonObj = this;
+	this.element.onclick = this.clickHandle;
+ }
+ 
+ Button.prototype.clickHandle = function(){
+     var imageLink = this.buttonObj.imageLink;
+	 var imageNode = document.getElementById("detailImage");
+     imageNode.src = imageLink;
+ }
+ 
+ 
+</script>
+<div id="hotProductZone">
+<div id="hpz_header"></div>
+<div id="hpz_main"></div>
+<div id="hpz_footer"></div>	
+</div>
+
+<div id="commentsList">
 <% if notice %>
 <p id="notice">
   <%= notice %>
@@ -14,3 +93,4 @@
   </div>
 </div>
 <% end %>
+</div>
