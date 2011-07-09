@@ -196,30 +196,6 @@
     font-size: small;
 }
 
-#hotProductZone .intro
-{
-	color:#226;
-	border-bottom: 1px solid #77d;
-}
-
-#hotProductZone .productsList
-{
-	float: left;
-}
-
-#hotProductZone .productsList a
-{
-	cursor: pointer;
-}
-
-#hotProductZone .detail img
-{
-	width: 300px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-	float: left;
-}
-
 #commentsList
 {
 	margin-top: 20em;

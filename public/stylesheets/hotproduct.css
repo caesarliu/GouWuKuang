@@ -1,0 +1,36 @@
+/* Hot product */
+
+#hotProductZone .intro
+{
+	color:#226;
+	border-bottom: 1px solid #77d;
+}
+
+#hotProductZone .productsList
+{
+	float: left;
+}
+
+#hotProductZone u1
+{
+	margin-top: 10px;
+	list-style: none;
+}
+
+#hotProductZone .productsList a
+{
+	display: block;
+	cursor: pointer;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	vertical-align: center;
+}
+
+#hotProductZone .detail img
+{
+	width: 300px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+	float: left;
+}
