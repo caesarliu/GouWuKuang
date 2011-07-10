@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GouWuKuang</title>
+  <head>
+    <title>GouWuKuang</title>
     <%= stylesheet_link_tag "scaffold" %>
-	<%= stylesheet_link_tag "hotproduct"%>
+    <%= stylesheet_link_tag "hotproduct"%>
     <%= stylesheet_link_tag "shopping", :media => "all" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
-</head>
-<body id="store">
+  </head>
+  <body id="store">
     <div id="banner">
-        <%= image_tag("logo.png") %>
-        <%= @page_title || "购物狂" %>
+      <%= image_tag("logo.png") %>
+      <%= @page_title || "购物狂" %>
+    </div>
+    <div id="navi">
+      <u1>
+        <li>
+          <a href="http://localhost:3000/">首页</a>
+        </li>
+        <li>
+          <a href="http://localhost:3000/products">排行榜</a>
+        </li>
+        <li>
+          <a>好友的宝贝</a>
+        </li>
+        <li>
+          <a>宝贝库</a>
+        </li>
+      </u1>
     </div>
     <div id="columns">
-        <div id="side">
-            <a href="http://localhost:3000/">Home</a>
-            <br />
-            <a href="http://www..../faq">Questions</a>
-            <br />
-            <a href="http://www..../news">News</a>
-            <br />
-            <a href="http://www..../contact">Contact</a>
-            <br />
+      <div id="side">
+        <a href="http://localhost:3000/">Home</a>
+        <br />
+        <a href="http://www..../faq">Questions</a>
+        <br />
+        <a href="http://www..../news">News</a>
+        <br />
+        <a href="http://www..../contact">Contact</a>
+        <br />
+      </div>
+      <div id="main">
+        <div id="content">
+          <%= yield %>
         </div>
-	
-        <div id="main">
-			<div id="navi">
-			<u1>
-				<li><a>首页</a></li>
-			    <li><a>我的宝贝</a></li>
-				<li><a>好友的宝贝</a></li>
-				<li><a>宝贝库</a></li>
-			</u1>
-			</div>
-			<div id="content">
-            <%= yield %>
-			</div>
-        </div>
+      </div>
     </div>
-</body>
+    </div>
+  </body>
 </html>
