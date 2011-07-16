@@ -1,5 +1,10 @@
 /* Hot product */
 
+#hotProductZone
+{
+	
+}
+
 #hotProductZone .intro
 {
 	color:#226;
@@ -15,6 +20,7 @@
 {
 	margin-top: 10px;
 	list-style: none;
+	/*border: 1px solid red;*/
 }
 
 #hotProductZone .productsList a
