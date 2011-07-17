@@ -35,14 +35,12 @@
  {
 	this.element = element;
 	this.element.buttonObj = this;
-	this.element.onclick = this.clickHandle;
+	this.element.onmouseover = this.clickHandle;
  }
  
  Button.prototype.clickHandle = function(){
      for(var i=0; i<navBtnList.length; i++)
 	 {
-		
-		var imageId = "detailImage" + i;
 		
 		var hpz_mainNode = document.getElementById("hpz_main");
         var detailImageList = hpz_mainNode.getElementsByTagName("img");
