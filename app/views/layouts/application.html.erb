@@ -30,18 +30,34 @@
         </li>
       </u1>
     </div>
-    <div id="columns">
-      <div id="side">
-	    <%= link_to "Home", default_path %>
-        <br />
-        <a href="http://www..../faq">Questions</a>
-        <br />
-        <a href="http://www..../news">News</a>
-        <br />
-        <a href="http://www..../contact">Contact</a>
-        <br />
-      </div>
-      <div id="main">
+    <div id="main">
+      <div id="columns">
+        <div id="sidebar">
+          <div id="popList">
+            <div class="box-t">
+              <span class="box-tl"></span>
+              <span class="box-tm"></span>
+              <span class="box-tr"></span>
+            </div>
+            <div class="box-wrap">
+              <div class="box-cont">
+                <h3>热评产品</h3>
+                <ul class="invite-list draw-list">
+                  <li>
+                    iPad
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box-b">
+              <span class="box-bl"></span>
+              <span class="box-bm"></span>
+              <span class="box-br"></span>
+            </div>
+          </div>
+          <div class="spline">
+          </div>
+        </div>
         <div id="content">
           <%= yield %>
         </div>
