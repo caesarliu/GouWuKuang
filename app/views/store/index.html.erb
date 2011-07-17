@@ -1,8 +1,9 @@
 <script type='text/javascript'>
  window.onload=function(){
 	addHotProductNode();
-	addPListToProductNode();
-	addDetailBoxToProductNode();
+	registerHotProductNavBtn();
+	//addPListToProductNode();
+	//addDetailBoxToProductNode();
  }
  
  function addHotProductNode(){
@@ -14,66 +15,71 @@
 	introEl.appendChild(txtNode);
  }
  
- function addHeaderToProductNode(){
-	
- }
+ var navBtnList = new Array();
  
- function addPListToProductNode(){
-	var u1Node = document.createElement("u1");
-	u1Node.className = "productsList";
-	var productList = new Array("iphone1", "iphone2", "iphone3", "iphone4","iphone5");
-	var productImgLinks = new Array("http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg",
-	"http://2e.zol-img.com.cn/product/64/294/ceAxYYKlyE9bg.jpg",
-	"http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg",
-	"http://2e.zol-img.com.cn/product/64/294/ceAxYYKlyE9bg.jpg",
-	"http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg");
-	for(var i=0; i<productList.length; i++ )
+ function registerHotProductNavBtn(){
+    
+	var u1Node = document.getElementById("navBtnList");
+	var liList = u1Node.getElementsByTagName("li");
+	for(var i=0; i<liList.length; i++)
 	{
-		var liNode = document.createElement("li");
-		var linkNode = document.createElement("a");
-		var linkButton = new Button(linkNode, productImgLinks[i]);
-		var txtNode = document.createTextNode(productList[i]);
-		linkNode.appendChild(txtNode);
-		liNode.appendChild(linkNode);
-		u1Node.appendChild(liNode);
+		var linkNode = liList[i].getElementsByTagName("a").item(0);
+		var linkButton = new Button(linkNode);
+		linkButton.index = i;
+		navBtnList[i] = linkButton;
 	}
 	
-	var hpz_main = document.getElementById("hpz_main");
-	hpz_main.appendChild(u1Node);
-	
  }
+
  
- function addDetailBoxToProductNode(){
-	var detaiNode = document.createElement("div");
-	detaiNode.className = "detail";
-	var imageNode = document.createElement("img");
-	imageNode.id = "detailImage";
-	imageNode.src = "http://2d.zol-img.com.cn/product/55/899/celN293jBrBiQ.jpg";
-	detaiNode.appendChild(imageNode);
-	var hpz_main = document.getElementById("hpz_main");
-	hpz_main.appendChild(detaiNode);
-	
- }
- 
- function Button(element, imageLink)
+ function Button(element)
  {
 	this.element = element;
-	this.imageLink = imageLink;
 	this.element.buttonObj = this;
 	this.element.onclick = this.clickHandle;
  }
  
  Button.prototype.clickHandle = function(){
-     var imageLink = this.buttonObj.imageLink;
-	 var imageNode = document.getElementById("detailImage");
-     imageNode.src = imageLink;
+     for(var i=0; i<navBtnList.length; i++)
+	 {
+		
+		var imageId = "detailImage" + i;
+		
+		var hpz_mainNode = document.getElementById("hpz_main");
+        var detailImageList = hpz_mainNode.getElementsByTagName("img");
+		var imageNode;
+		if(this.buttonObj.index == i)
+		{
+			imageNode = detailImageList[i];
+			imageNode.style.display = "block";
+		}
+		else
+		{
+			imageNode = detailImageList[i];
+			imageNode.style.display = "none";
+		}
+	    
+	 }
  }
  
  
 </script>
 <div id="hotProductZone">
 <div id="hpz_header"></div>
-<div id="hpz_main"></div>
+<div id="hpz_main">
+	<u1 id = "navBtnList" class="productsList">
+<% @products.each do |product|%>
+	<li>
+		<a><%= product.title %></a>
+	</li>
+<% end %>
+	</u1>
+<% @products.each do |product|%>
+	<div class="detail">
+		<img style="display:none" src=<%= product.image_url %>>
+	</div>
+<% end %>
+</div>
 <div id="hpz_footer"></div>	
 </div>
 
