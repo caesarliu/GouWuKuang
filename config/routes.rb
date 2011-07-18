@@ -1,4 +1,6 @@
 Shopping::Application.routes.draw do
+  resources :users
+
   get "default/index"
 
   get "store/index"
