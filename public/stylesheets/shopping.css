@@ -211,20 +211,45 @@
 	background: #226;
 	cursor: pointer;
 }
+
+#navi{
+   width: 100%;
+   height: 1em;
+   padding: 10px;
+   border-bottom: #77d dotted 5px;
+}
 		
 #navi u1{
 	padding: 0;
 	margin:0;
 	float: left;
   list-style: none;
-	width: 100%;
-	border-bottom: #77d dotted 5px;
+	
 }
 		
 #navi u1 li{
 	float: left;
 	padding-right:1em;
-}	   
+}
+#login
+{
+	margin: 2px;
+	height: 1em;
+	padding-bottom: 5px;
+	border-bottom: green dotted 1px;
+}	
+
+#login u1
+{
+	list-style: none;
+	float: right;
+}   
+
+#login u1 li
+{
+	float: right;
+	padding-left: 1em;
+}
 
 #commentsList
 {

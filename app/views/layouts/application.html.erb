@@ -10,6 +10,27 @@
 
   </head>
   <body id="store">
+  <div id="login">
+	    <u1>
+		 <% if session[:user_id] %>
+		 <li>
+            <%= link_to "退出", :controller => "sessions", :action => "destroy" %>
+		   </li>
+		   <li>
+            <%= "欢迎回来 #{session[:user_name]}" %>
+		   </li>
+		  <% else %>
+			<% if request.url != login_url%>
+				<li>
+				<%= link_to "注册", :controller => "users", :action => "new" %>
+				</li>
+				<li>
+					<%= link_to "登录", :controller => "sessions", :action => "new" %>
+				</li>
+			<% end %>
+		  <% end %>
+		</u1>
+	  </div>
     <div id="banner">
       <%= image_tag("logo.png") %>
       <%= @page_title || "购物狂" %>
@@ -28,9 +49,7 @@
         <li>
           <%= link_to "产品库", :controller => "store", :action => "index" %>
         </li>
-		<li>
-          <%= link_to "注册", :controller => "users", :action => "new" %>
-		</li>
+		
       </u1>
     </div>
     <div id="main">
