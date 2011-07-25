@@ -3,7 +3,7 @@
     display: block;
     margin: 0 auto;
     position: relative; 
-    width: 1024px;  
+    width: 980px;  
 }
 
 #main #notice {
@@ -95,13 +95,15 @@
     padding-left: 2ex;
     overflow: hidden;
     width: 800px;
+    border: 2px solid #E0DFDF;
     /*background: white;*/
 }
 
 #navi {
   position: relative;
   background: #DD2644;
-  width: 100%;  
+  width: 100%;
+  display: block;
 }
 
 #navi a{
@@ -117,10 +119,10 @@
     
 #navi u1{
   padding: 5px;
-  padding-left: 2ex;
   float: left;
   list-style: none;
-  background: #DD2644;   
+  background: #DD2644; 
+  width: 100%; 
 /*  border-bottom: #77d dotted 5px;*/
 }
     
@@ -137,8 +139,8 @@
 
 #sidebar {
     float: right;
-    margin-top: 1ex; 
-    /*border: 2px solid #E0DFDF;*/
+    padding-top: 1ex; 
+    border: 2px solid #E0DFDF;
     padding: 1em;
     width: 180px;
     overflow: hidden;
