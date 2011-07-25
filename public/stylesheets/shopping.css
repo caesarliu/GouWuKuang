@@ -231,3 +231,64 @@
 	padding-left: 1em;
 }
 
+/* An entry in the store catalog */
+
+#main  .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+#main  .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+#main .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+
+#main .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #227;
+}
+
+#main .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#main .entry .price_line {
+ clear: both;
+ margin-bottom: 0.5em;
+}
+
+#main .entry .add_to_cart {
+  position: relative;
+}
+
+#main .entry  .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+#main .entry form, #store .entry form div {
+    display: inline;
+}
+
+#main .cart_title {
+  font: 120% bold;
+}
+#main .item_price, #store .total_line {
+  text-align: right;
+}
+#main .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
