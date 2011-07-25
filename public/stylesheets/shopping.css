@@ -90,23 +90,21 @@
 }
 #content {
     float: left;
-    /*margin-top: 1em;*/
     padding-top: 1em;
     padding-left: 2ex;
     overflow: hidden;
-    width: 800px;
-    border: 2px solid #E0DFDF;
-    /*background: white;*/
+    width: 780px;
+/*    border: 2px solid #E0DFDF;*/
 }
 
 #navi {
   position: relative;
   background: #DD2644;
-  width: 100%;
   display: block;
 }
 
 #navi a{
+  padding: 5px;
   display: block;
   font:  150% sans-serif;
   color: white;
@@ -118,12 +116,10 @@
 }
     
 #navi u1{
-  padding: 5px;
   float: left;
   list-style: none;
   background: #DD2644; 
   width: 100%; 
-/*  border-bottom: #77d dotted 5px;*/
 }
     
 #navi u1 li{
@@ -139,11 +135,11 @@
 
 #sidebar {
     float: right;
-    padding-top: 1ex; 
-    border: 2px solid #E0DFDF;
-    padding: 1em;
-    width: 180px;
+    padding-top: 5px; 
+    padding: 5px;
+    width: 160px;
     overflow: hidden;
+/*    border: 2px solid #E0DFDF;*/
 }
 
 #sidebar .spline {
