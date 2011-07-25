@@ -7,11 +7,32 @@
     <%= stylesheet_link_tag "shopping", :media => "all" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
-
   </head>
   <body id="store">
+  <body id="main">
+    <div id="login">
+      <u1>
+        <% if session[:user_id] %>
+        <li>
+          <%= link_to "退出", :controller => "sessions", :action => "destroy" %>
+        </li>
+        <li>
+          <%= "欢迎回来 #{session[:user_name]}" %>
+        </li>
+        <% else %>
+        <% if request.url != login_url%>
+        <li>
+          <%= link_to "注册", :controller => "users", :action => "new" %>
+        </li>
+        <li>
+          <%= link_to "登录", :controller => "sessions", :action => "new" %>
+        </li>
+        <% end %>
+        <% end %>
+      </u1>
+    </div>
     <div id="banner">
-      <%= image_tag("logo.png") %>
+      <!-- <%= image_tag("logo.png") %> -->
       <%= @page_title || "购物狂" %>
     </div>
     <div id="navi">
@@ -28,15 +49,18 @@
         <li>
           <%= link_to "产品库", :controller => "store", :action => "index" %>
         </li>
+<<<<<<< HEAD
 		<li>
           <%= link_to "注册", :controller => "users", :action => "new" %>
 		</li>
+=======
+>>>>>>> 8a34cff9a573e99f82242fed9e08cfe1a78f63c0
       </u1>
     </div>
-    <div id="main">
+    <div id="container">
       <div id="columns">
         <div id="sidebar">
-          <div id="popList">
+          <div class="popList">
             <div class="box-t">
               <span class="box-tl"></span>
               <span class="box-tm"></span>
@@ -58,8 +82,7 @@
               <span class="box-br"></span>
             </div>
           </div>
-          <div class="spline">
-          </div>
+          <div class="spline"></div>
         </div>
         <div id="content">
           <%= yield %>

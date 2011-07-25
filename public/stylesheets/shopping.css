@@ -1,6 +1,12 @@
 /* Global styles */
+#main {
+    display: block;
+    margin: 0 auto;
+    position: relative; 
+    width: 980px;  
+}
 
-#store #notice {
+#main #notice {
         color: #000;
         border: 2px solid red;
         padding: 1em;
@@ -10,7 +16,7 @@
 }
 
 
-#store h1 {
+#main h1 {
         font:  150% sans-serif;
         color: #226;
         border-bottom: 3px dotted #77d;
@@ -64,77 +70,16 @@
   background:   #f8e880;
 }
 
-/* An entry in the store catalog */
-
-#store  .entry {
-  overflow: auto;
-  margin-top: 1em;
-  border-bottom: 1px dotted #77d;
-}
-
-#store  .title {
-  font-size: 120%;
-  font-family: sans-serif;
-}
-
-#store .entry img {
-  width: 80px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  float: left;
-}
-
-
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
-}
-
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
-}
-
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
-  position: relative;
-}
-
-#store .entry  .price {
-  color: #44a;
-  font-weight: bold;
-  margin-right: 2em;
-}
-
-#store .entry form, #store .entry form div {
-    display: inline;
-}
-
-#store .cart_title {
-  font: 120% bold;
-}
-#store .item_price, #store .total_line {
-  text-align: right;
-}
-#store .total_line .total_cell {
-  font-weight: bold;
-  border-top: 1px solid #595;
-}
-
 /* Styles for main page */
 #banner {
-    background: #9c9;
+    background: #DD2644;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px solid;
+    padding-left: 10px;
+    border-bottom: 2px solid #E2657A;
     font: small-caps 40px/40px "Times New Roman", serif;
-    color: #282;
-    text-align: center;
+    color: white;
+    text-align: left;
 }
 #banner img {
     float: left;
@@ -143,18 +88,59 @@
 /*    margin-top: 2em;*/
 
 }
+#content {
+    float: left;
+    /*margin-top: 1em;*/
+    padding-top: 1em;
+    padding-left: 2ex;
+    overflow: hidden;
+    width: 800px;
+    border: 2px solid #E0DFDF;
+    /*background: white;*/
+}
 
-#main { 
+#navi {
+  position: relative;
+  background: #DD2644;
+  width: 100%;
+  display: block;
+}
+
+#navi a{
+  display: block;
+  font:  150% sans-serif;
+  color: white;
+}
+    
+#navi a:hover {
+  background: #E2657A;
+  cursor: pointer;
+}
+    
+#navi u1{
+  padding: 5px;
+  float: left;
+  list-style: none;
+  background: #DD2644; 
+  width: 100%; 
+/*  border-bottom: #77d dotted 5px;*/
+}
+    
+#navi u1 li{
+  float: left;
+  padding-right:1em;
+}    
+
+#container { 
     display: block;
     margin: 0 auto;
-    position: relative;
-    width: 1024px;
+    position: relative;    
 }
 
 #sidebar {
     float: right;
-    margin-top: 1ex; 
-    /*border: 2px solid #E0DFDF;*/
+    padding-top: 1ex; 
+    border: 2px solid #E0DFDF;
     padding: 1em;
     width: 180px;
     overflow: hidden;
@@ -169,7 +155,6 @@
     height: 5px;
 }
 #sidebar h3 {
-/*    background: -moz-linear-gradient(#FEFEFE, #EDEDED) repeat scroll 0 0 transparent;*/
     color: #CC0000;
     height: 25px;
     line-height: 20px;
@@ -226,81 +211,23 @@
 	padding-right:1em;
 }	   
 
-#commentsList
+#login
 {
-	margin-top: 0em;
+	margin: 2px;
+	height: 1em;
+	padding-bottom: 5px;
+	border-bottom: green dotted 1px;
+}	
+
+#login u1
+{
+	list-style: none;
+	float: right;
+}   
+
+#login u1 li
+{
+	float: right;
+	padding-left: 1em;
 }
 
-.box, .main-Box {
-    padding-bottom: 10px;
-}
-#sidear .box-t, .box-b {
-    font-size: 0;
-    position: relative;
-}
-#sidear .box-tl, .box-tr, .box-bl, .box-br {
-    display: block;
-    height: 5px;
-    position: absolute;
-    top: 0;
-    width: 5px;
-}
-#sidear .box-tm, .box-bm {
-    background-color: #FFFFFF;
-    display: block;
-    height: 4px;
-    margin: 0 5px;
-}
-#sidear .box-tm {
-    border-top: 1px solid #DEDEDE;
-}
-#sidear .box-bm {
-    border-bottom: 1px solid #DEDEDE;
-}
-#sidear .box-tl {
-    background-position: -140px -140px;
-    left: 0;
-}
-#sidear .box-tr {
-    background-position: -145px -140px;
-    right: 0;
-}
-#sidear .box-bl {
-    background-position: -140px -145px;
-    left: 0;
-}
-#sidear .box-br {
-    background-position: -145px -145px;
-    right: 0;
-}
-#sidear .box-cont {
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #FFFFFF;
-    border-color: #DEDEDE;
-    border-style: solid;
-    border-width: 0 1px;
-    padding: 10px;
-}
-
-#sidear .box-cont {
-    min-height: 60px;
-}
-
-/* Styles for order form */
-.depot_form fieldset { background: #efe;
-}
-
-.depot_form legend { color: #dfd; background: #141; font-family: sans-serif; padding: 0.2em 1em;
-}
-.depot_form label { width: 5em; float: left; text-align: right; padding-top: 0.2em; margin-right: 0.1em; display: block;
-}
-.depot_form select, .depot_form textarea, .depot_form input { margin-left: 0.5em;
-}
-.depot_form .submit { margin-left: 4em;
-}
-.depot_form div { margin: 0.5em 0;
-}
