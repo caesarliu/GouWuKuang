@@ -1,4 +1,18 @@
 Shopping::Application.routes.draw do
+  get "admin" => "admin#index"
+  
+  #debugger
+  
+  #bind url to action
+  controller :sessions do
+    get 'login' => :new
+	post 'login' => :create
+	#delete 'logout' => :destroy
+	get 'logout' => :destroy
+  end
+
+  resources :users
+
   get "default/index"
 
   get "store/index"

@@ -1,5 +1,6 @@
  class StoreController < ApplicationController
-    def index
-      @products = Product.all
+    skip_before_filter :authorize
+	def index
+		@products = Product.all
     end
   end

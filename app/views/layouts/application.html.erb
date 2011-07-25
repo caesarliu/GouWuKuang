@@ -9,19 +9,46 @@
     <%= csrf_meta_tag %>
   </head>
   <body id="main">
-    <div id="header">
-      <div id="banner">
-        <!-- <%= image_tag("logo.png") %> -->
-        <%= @page_title || "购物狂" %>
-      </div>
-      <div id="navi">
-        <u1>
-          <li><a href="http://localhost:3000/">首页</a></li>
-          <li><a href="http://localhost:3000/products">排行榜</a></li>
-          <li><a>好友的宝贝</a></li>
-          <li><a>宝贝库</a></li>
-        </u1>
-      </div>
+    <div id="login">
+      <u1>
+        <% if session[:user_id] %>
+        <li>
+          <%= link_to "退出", :controller => "sessions", :action => "destroy" %>
+        </li>
+        <li>
+          <%= "欢迎回来 #{session[:user_name]}" %>
+        </li>
+        <% else %>
+        <% if request.url != login_url%>
+        <li>
+          <%= link_to "注册", :controller => "users", :action => "new" %>
+        </li>
+        <li>
+          <%= link_to "登录", :controller => "sessions", :action => "new" %>
+        </li>
+        <% end %>
+        <% end %>
+      </u1>
+    </div>
+    <div id="banner">
+      <!-- <%= image_tag("logo.png") %> -->
+      <%= @page_title || "购物狂" %>
+    </div>
+    <div id="navi">
+      <u1>
+        <li>
+          <%= link_to "首页", default_path %>
+        </li>
+        <li>
+          <a href="http://localhost:3000/products">排行榜</a>
+        </li>
+        <li>
+          <a>好友的宝贝</a>
+        </li>
+        <li>
+          <%= link_to "产品库", :controller => "store", :action => "index" %>
+        </li>
+      </u1>
     </div>
     <div id="container">
       <div id="columns">

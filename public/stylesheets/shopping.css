@@ -170,67 +170,23 @@
     padding: 0 0 5px;
 }
 
-
-#commentsList
+#login
 {
-	margin-top: 0em;
+	margin: 2px;
+	height: 1em;
+	padding-bottom: 5px;
+	border-bottom: green dotted 1px;
+}	
+
+#login u1
+{
+	list-style: none;
+	float: right;
+}   
+
+#login u1 li
+{
+	float: right;
+	padding-left: 1em;
 }
 
-.box, .main-Box {
-    padding-bottom: 10px;
-}
-#sidear .box-t, .box-b {
-    font-size: 0;
-    position: relative;
-}
-#sidear .box-tl, .box-tr, .box-bl, .box-br {
-    display: block;
-    height: 5px;
-    position: absolute;
-    top: 0;
-    width: 5px;
-}
-#sidear .box-tm, .box-bm {
-    background-color: #FFFFFF;
-    display: block;
-    height: 4px;
-    margin: 0 5px;
-}
-#sidear .box-tm {
-    border-top: 1px solid #DEDEDE;
-}
-#sidear .box-bm {
-    border-bottom: 1px solid #DEDEDE;
-}
-#sidear .box-tl {
-    background-position: -140px -140px;
-    left: 0;
-}
-#sidear .box-tr {
-    background-position: -145px -140px;
-    right: 0;
-}
-#sidear .box-bl {
-    background-position: -140px -145px;
-    left: 0;
-}
-#sidear .box-br {
-    background-position: -145px -145px;
-    right: 0;
-}
-#sidear .box-cont {
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #FFFFFF;
-    border-color: #DEDEDE;
-    border-style: solid;
-    border-width: 0 1px;
-    padding: 10px;
-}
-
-#sidear .box-cont {
-    min-height: 60px;
-}
