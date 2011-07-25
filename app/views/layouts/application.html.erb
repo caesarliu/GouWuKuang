@@ -7,33 +7,26 @@
     <%= stylesheet_link_tag "shopping", :media => "all" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
-
   </head>
-  <body id="store">
-    <div id="banner">
-      <%= image_tag("logo.png") %>
-      <%= @page_title || "购物狂" %>
+  <body id="main">
+    <div id="header">
+      <div id="banner">
+        <!-- <%= image_tag("logo.png") %> -->
+        <%= @page_title || "购物狂" %>
+      </div>
+      <div id="navi">
+        <u1>
+          <li><a href="http://localhost:3000/">首页</a></li>
+          <li><a href="http://localhost:3000/products">排行榜</a></li>
+          <li><a>好友的宝贝</a></li>
+          <li><a>宝贝库</a></li>
+        </u1>
+      </div>
     </div>
-    <div id="navi">
-      <u1>
-        <li>
-          <a href="http://localhost:3000/">首页</a>
-        </li>
-        <li>
-          <a href="http://localhost:3000/products">排行榜</a>
-        </li>
-        <li>
-          <a>好友的宝贝</a>
-        </li>
-        <li>
-          <a>宝贝库</a>
-        </li>
-      </u1>
-    </div>
-    <div id="main">
+    <div id="container">
       <div id="columns">
         <div id="sidebar">
-          <div id="popList">
+          <div class="popList">
             <div class="box-t">
               <span class="box-tl"></span>
               <span class="box-tm"></span>
@@ -55,8 +48,7 @@
               <span class="box-br"></span>
             </div>
           </div>
-          <div class="spline">
-          </div>
+          <div class="spline"></div>
         </div>
         <div id="content">
           <%= yield %>

@@ -1,6 +1,12 @@
 /* Global styles */
+#main {
+    display: block;
+    margin: 0 auto;
+    position: relative; 
+    width: 1024px;  
+}
 
-#store #notice {
+#main #notice {
         color: #000;
         border: 2px solid red;
         padding: 1em;
@@ -10,7 +16,7 @@
 }
 
 
-#store h1 {
+#main h1 {
         font:  150% sans-serif;
         color: #226;
         border-bottom: 3px dotted #77d;
@@ -64,77 +70,16 @@
   background:   #f8e880;
 }
 
-/* An entry in the store catalog */
-
-#store  .entry {
-  overflow: auto;
-  margin-top: 1em;
-  border-bottom: 1px dotted #77d;
-}
-
-#store  .title {
-  font-size: 120%;
-  font-family: sans-serif;
-}
-
-#store .entry img {
-  width: 80px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  float: left;
-}
-
-
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
-}
-
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
-}
-
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
-  position: relative;
-}
-
-#store .entry  .price {
-  color: #44a;
-  font-weight: bold;
-  margin-right: 2em;
-}
-
-#store .entry form, #store .entry form div {
-    display: inline;
-}
-
-#store .cart_title {
-  font: 120% bold;
-}
-#store .item_price, #store .total_line {
-  text-align: right;
-}
-#store .total_line .total_cell {
-  font-weight: bold;
-  border-top: 1px solid #595;
-}
-
 /* Styles for main page */
 #banner {
-    background: #9c9;
+    background: #DD2644;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px solid;
+    padding-left: 10px;
+    border-bottom: 2px solid #E2657A;
     font: small-caps 40px/40px "Times New Roman", serif;
-    color: #282;
-    text-align: center;
+    color: white;
+    text-align: left;
 }
 #banner img {
     float: left;
@@ -143,12 +88,51 @@
 /*    margin-top: 2em;*/
 
 }
+#content {
+    float: left;
+    /*margin-top: 1em;*/
+    padding-top: 1em;
+    padding-left: 2ex;
+    overflow: hidden;
+    width: 800px;
+    /*background: white;*/
+}
 
-#main { 
+#navi {
+  position: relative;
+  background: #DD2644;
+  width: 100%;  
+}
+
+#navi a{
+  display: block;
+  font:  150% sans-serif;
+  color: white;
+}
+    
+#navi a:hover {
+  background: #E2657A;
+  cursor: pointer;
+}
+    
+#navi u1{
+  padding: 5px;
+  padding-left: 2ex;
+  float: left;
+  list-style: none;
+  background: #DD2644;   
+/*  border-bottom: #77d dotted 5px;*/
+}
+    
+#navi u1 li{
+  float: left;
+  padding-right:1em;
+}    
+
+#container { 
     display: block;
     margin: 0 auto;
-    position: relative;
-    width: 1024px;
+    position: relative;    
 }
 
 #sidebar {
@@ -169,7 +153,6 @@
     height: 5px;
 }
 #sidebar h3 {
-/*    background: -moz-linear-gradient(#FEFEFE, #EDEDED) repeat scroll 0 0 transparent;*/
     color: #CC0000;
     height: 25px;
     line-height: 20px;
@@ -187,44 +170,6 @@
     padding: 0 0 5px;
 }
 
-#content {
-    float: left;
-    /*margin-top: 1em;*/
-    padding-top: 1em;
-    padding-left: 2ex;
-    overflow: hidden;
-    width: 800px;
-    /*background: white;*/
-}
-#navi {
-  position: relative;
-}
-
-#navi a{
-	display: block;
-	font:  150% sans-serif;
-	color: #226;	
-}
-		
-#navi a:hover {
-	color: white;
-	background: #226;
-	cursor: pointer;
-}
-		
-#navi u1{
-	padding: 0;
-	margin:0;
-	float: left;
-  list-style: none;
-	width: 100%;
-	border-bottom: #77d dotted 5px;
-}
-		
-#navi u1 li{
-	float: left;
-	padding-right:1em;
-}	   
 
 #commentsList
 {
