@@ -168,15 +168,6 @@
     padding: 0 0 5px;
 }
 
-#content {
-    float: left;
-    /*margin-top: 1em;*/
-    padding-top: 1em;
-    padding-left: 2ex;
-    overflow: hidden;
-    width: 800px;
-    /*background: white;*/
-}
 #navi {
   position: relative;
 }
