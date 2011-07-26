@@ -72,14 +72,20 @@
 
 /* Styles for main page */
 #banner {
-    background: #DD2644;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    border-bottom: 2px solid #E2657A;
-    font: small-caps 40px/40px "Times New Roman", serif;
-    color: white;
-    text-align: left;
+  background: -moz-linear-gradient(#FFA200, #F07B08 70%, #E26A09 90%, #FF8400 100%) repeat scroll 0 0 transparent;
+  border-bottom: 1px solid #DB7B5D;
+  border-top: 1px solid #DB7B5D;
+  display: block;
+  height: 34px;
+  line-height: 33px;
+  position: relative;
+  z-index: 40;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: white;
+  text-align: left;
 }
 #banner img {
     float: left;
@@ -97,35 +103,53 @@
 /*    border: 2px solid #E0DFDF;*/
 }
 
-#navi {
-  position: relative;
-  background: #DD2644;
+#navi {  
+  background: -moz-linear-gradient(#FFA200, #F07B08 70%, #E26A09 90%, #FF8400 100%) repeat scroll 0 0 transparent;
+  border-bottom: 2px solid #DCDCDC;
+  border-top: 1px solid #DB7B5D;
   display: block;
+  height: 34px;
+  line-height: 33px;
+  position: relative;
+  z-index: 40;
 }
 
 #navi a{
   padding: 5px;
   display: block;
-  font:  150% sans-serif;
+  font:  125% sans-serif;
   color: white;
 }
     
 #navi a:hover {
-  background: #E2657A;
+  background: #FFA800;
   cursor: pointer;
 }
     
-#navi u1{
-  float: left;
+.leftNavi{
+  float:left;
   list-style: none;
-  background: #DD2644; 
-  width: 100%; 
 }
     
-#navi u1 li{
-  float: left;
+.leftNavi li{
+  float:left;
+  padding-right:1em;
+}
+
+.rightNavi{
+  position:absolute;
+  right:0;
+  top:0;
+  list-style: none;
+  width:320px; 
+}
+    
+.rightNavi li{
+  float:right;
+  list-style: none;
   padding-right:1em;
 }    
+    
 
 #container { 
     display: block;
@@ -168,51 +192,11 @@
     padding: 0 0 5px;
 }
 
-#content {
-    float: left;
-    /*margin-top: 1em;*/
-    padding-top: 1em;
-    padding-left: 2ex;
-    overflow: hidden;
-    width: 800px;
-    /*background: white;*/
-}
-#navi {
-  position: relative;
-}
-
-#navi a{
-	display: block;
-	font:  150% sans-serif;
-	color: #226;	
-}
-		
-#navi a:hover {
-	color: white;
-	background: #226;
-	cursor: pointer;
-}
-		
-#navi u1{
-	padding: 0;
-	margin:0;
-	float: left;
-  list-style: none;
-	width: 100%;
-	border-bottom: #77d dotted 5px;
-}
-		
-#navi u1 li{
-	float: left;
-	padding-right:1em;
-}	   
-
 #login
 {
-	margin: 2px;
+/*	margin: 2px;
 	height: 1em;
-	padding-bottom: 5px;
-	border-bottom: green dotted 1px;
+	padding-bottom: 5px;*/
 }	
 
 #login u1
