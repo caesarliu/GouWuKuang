@@ -73,6 +73,7 @@
 /* Styles for main page */
 #banner {
   background: -moz-linear-gradient(#FFA200, #F07B08 70%, #E26A09 90%, #FF8400 100%) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFA200), to(#F07B08)); 
   border-bottom: 1px solid #DB7B5D;
   border-top: 1px solid #DB7B5D;
   display: block;
@@ -105,6 +106,7 @@
 
 #navi {  
   background: -moz-linear-gradient(#FFA200, #F07B08 70%, #E26A09 90%, #FF8400 100%) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFA200), to(#F07B08)); 
   border-bottom: 2px solid #DCDCDC;
   border-top: 1px solid #DB7B5D;
   display: block;
