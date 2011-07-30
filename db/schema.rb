@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110718141147) do
+ActiveRecord::Schema.define(:version => 20110730110336) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20110718141147) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token"
+    t.datetime "remember_token_expires", :limit => 255
   end
 
 end

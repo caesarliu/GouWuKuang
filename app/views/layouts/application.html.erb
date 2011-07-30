@@ -33,12 +33,12 @@
         </div>
         <div class="rightNavi">
           <u1>
-            <% if session[:user_id] %>
+            <% if session[:user] %>
             <li>
               <%= link_to "退出", :controller => "sessions", :action => "destroy" %>
             </li>
             <li>
-              <%= "欢迎回来 #{session[:user_name]}" %>
+              <%= "欢迎回来 #{session[:user].name}" %>
             </li>
             <% else %>
             <% if request.url != login_url%>

@@ -31,6 +31,18 @@ class User < ActiveRecord::Base
 			self.hashed_password = self.class.encrypt_password(password, salt)
 		end
 	end
+	
+	def remember_me
+		self.remember_token = self.hashed_password
+		self.remember_token_expires = 2.weeks.from_now
+		self.update_attribute(:remember_token, self.remember_token)
+	end
+	
+	def forget_me
+		self.remember_token = nil
+		self.remember_token_expires = nil
+	    self.update_attribute(:remember_token, self.remember_token)
+	end
 
 	
 private
