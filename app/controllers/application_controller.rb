@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 protected
   
   def authorize
-    unless User.find_by_id(session[:user].id)
+    unless session[:user] && User.find_by_id(session[:user].id)
       redirect_to login_url, :notice => "请登录"
 	end
   end
