@@ -17,7 +17,7 @@
 
 <p>
   <b>Tags:</b>
-  <%= @post.tags.map { |t| t.name }.join(",")  %>
+  <%= join_tags(@post) %>
 </p>
 
 <h2>评论</h2>
