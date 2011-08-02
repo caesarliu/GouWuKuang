@@ -1,4 +1,8 @@
 Shopping::Application.routes.draw do
+  resources :posts do
+	resources :comments
+  end
+
   get "admin" => "admin#index"
   
   controller :sessions do

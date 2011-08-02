@@ -1,0 +1,15 @@
+<p>
+  <b>评论人：</b>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <b>评论：</b>
+  <%= comment.body %>
+</p>
+
+<p>
+  <%= link_to '删除评论', [comment.post, comment],
+			  :confirm => '确定删除？',
+			  :method => :delete %>
+</p>
