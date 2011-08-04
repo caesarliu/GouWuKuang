@@ -45,3 +45,25 @@ Product.create(:title => 'Rails Test Prescriptions',
       </p>},
   :image_url => '/images/rtp.jpg',
   :price => 43.75)
+ 
+# Brands  
+Brand.delete_all
+Brand.create(:name => '苹果',
+  :description => 
+    %{<p>
+                      知名电子消费品厂商.
+      </p>},
+  :image_url =>   '/images/Brands/apple.jpg') 
+  
+#Mobile_Phones  
+MobilePhone.delete_all
+MobilePhone.create(:name => '苹果（APPLE）iPhone 4 16G版 3G手机（白色）WCDMA/GSM',
+  :brand_id => 1,
+  :model => 'iPhone4',
+  :rank => 10,
+  :price => 5880.00,  
+  :spec =>
+    %{WCDMA/GSM},
+  :description => 
+    %{One of the most popular mobile phone.},
+  :image_url =>   '/images/MobilePhones/iPhone4.jpg') 

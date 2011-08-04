@@ -1,4 +1,8 @@
 Shopping::Application.routes.draw do
+  resources :mobile_phones
+
+  resources :brands
+
   resources :posts do
 	resources :comments
   end

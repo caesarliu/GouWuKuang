@@ -1,0 +1,23 @@
+<h1>Listing brands</h1>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @brands.each do |brand| %>
+  <tr>
+    <td><%= image_tag(brand.image_url, :class => 'list_image') %></td>
+    <td><%= brand.name %></td>
+    <td><%= brand.image_url %></td>
+    <td><%= link_to 'Show', brand %></td>
+    <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+    <td><%= link_to 'Destroy', brand, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to 'New Brand', new_brand_path %> 
