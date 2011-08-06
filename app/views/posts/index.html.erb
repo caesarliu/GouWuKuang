@@ -17,7 +17,7 @@
     <td><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete, :remote => true, :class=>'delete_post' %></td>
   </tr>
 <% end %>
 </table>

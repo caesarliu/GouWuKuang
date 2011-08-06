@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_filter :authorize
   before_filter :login_from_cookie
+  
   protect_from_forgery
   
 protected
@@ -18,4 +19,5 @@ protected
 		    session[:user] = user
       end
    end
+   
 end

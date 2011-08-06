@@ -46,11 +46,13 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
-        format.xml  { render :xml => @post, :status => :created, :location => @post }
+        format.js
+		#format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-      end
+        #format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
+        format.js
+	  end
     end
   end
 
@@ -78,7 +80,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(posts_url) }
-      format.xml  { head :ok }
+      #format.xml  { head :ok }
+	  format.js {render :nothing => true}
     end
   end
 end
