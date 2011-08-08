@@ -2,14 +2,22 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-				  /*
-				  $("a").click(function() {
-							   alert("Hello world!");
-							   });
-				   */
-				  $('.delete_post').bind('ajax:success', function() { 
-										 $(this).closest('tr').fadeOut();  
-										 });  
-						});     
+	$('.delete_post').bind('ajax:success', function() { 
+		$(this).closest('tr').fadeOut();  
+	});
+	
+	$('#login-link').facebox({  
+	    loadingImage : '/images/loading.gif',  
+		closeImage   : '/images/closelabel.png'
+	});  
+
+	$(document).bind('reveal.facebox', function() {  
+	    $('#new_user_session').submit(function() {  
+		    $.post(this.action, $(this).serialize(), null, "script");  
+			return false;  
+		});  
+	}); 
+				   
+});     
 
 

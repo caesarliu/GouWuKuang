@@ -4,9 +4,11 @@
     <title>GouWuKuang</title>
     <%= stylesheet_link_tag "scaffold" %>
     <%= stylesheet_link_tag "hotproduct"%>
+	<%= stylesheet_link_tag "facebox"  %>
     <%= stylesheet_link_tag "shopping", :media => "all" %>
 	<%= javascript_include_tag "jquery" %>
 	<%= javascript_include_tag "rails"%>
+	<%= javascript_include_tag "facebox"%>	
 	<%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
   </head>
@@ -48,7 +50,7 @@
               <%= link_to "注册", :controller => "users", :action => "new" %>
             </li>
             <li>
-              <%= link_to "登录", :controller => "sessions", :action => "new" %>
+              <%= link_to "登录", {:controller => "sessions", :action => "new"},  :id => 'login-link'%>
             </li>
             <% end %>
             <% end %>

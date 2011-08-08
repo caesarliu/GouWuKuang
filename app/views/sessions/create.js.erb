@@ -1,0 +1,6 @@
+// escape_javascript is case sensitive, don't spell it like escape_Javascript.
+$('#facebox .content').html("<%= escape_javascript(render :partial => 'form') %>");  
+$('#new_user_session').submit(function() {  
+    $.post(this.action, $(this).serialize(), null, "script");  
+    return false;  
+}); 
