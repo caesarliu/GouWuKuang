@@ -4,12 +4,18 @@ class SessionsController < ApplicationController
   
   def new
       session[:previous_url] = request.referer
+	  #in login on demand case, the destination url need to store before login process
+	  if params[:dest]
+	    session[:previous_url] = params[:dest]
+	  end
 	  p session[:previous_url]
+	  
   end
 
   def create
   
 	if user = User.authenticate(params[:name], params[:password])
+        #session is stored for each client
 		session[:user] = user
 		
 		#check if need to save login
@@ -17,7 +23,7 @@ class SessionsController < ApplicationController
 		  user.remember_me
           cookies[:auth_token] = { :value => user.remember_token , :expires => user.remember_token_expires }
 		end
-	
+	    
 		p "redirect to " + session[:previous_url]
 		
 		respond_to do |format|

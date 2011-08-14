@@ -6,7 +6,8 @@ $(document).ready(function() {
 		$(this).closest('tr').fadeOut();  
 	});
 	
-	$('#login-link').facebox({  
+	//this class is used for all login on-demand links
+	$('.login-link').facebox({  
 	    loadingImage : '/images/loading.gif',  
 		closeImage   : '/images/closelabel.png'
 	});  
@@ -17,6 +18,7 @@ $(document).ready(function() {
 			return false;  
 		});  
 	}); 
+				  
 				   
 });     
 
