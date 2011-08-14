@@ -28,6 +28,9 @@ Brand.create(:name => 'Pragmatic Programmer',
 Product.delete_all
 Product.create(:title => 'Web Design for Developers',
   :brand_id => 2,
+  :model => 'V2',
+  :rank => 10,
+  :spec => %{A},
   :description =>
   %{<p>
           <em>Web Design for Developers</em> will show you how to make your
@@ -43,6 +46,9 @@ Product.create(:title => 'Web Design for Developers',
 # . . .
 Product.create(:title => 'Programming Ruby 1.9',
   :brand_id => 2,
+  :model => 'V3',
+  :rank => 10,
+  :spec => %{B},
   :description =>
   %{<p>
           Ruby is the fastest growing and most exciting dynamic language
@@ -55,6 +61,9 @@ Product.create(:title => 'Programming Ruby 1.9',
 
 Product.create(:title => 'Rails Test Prescriptions',
   :brand_id => 2,
+  :model => 'V4',
+  :rank => 10,
+  :spec => %{A},
   :description =>
   %{<p>
           <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -71,9 +80,8 @@ Product.create(:title => '苹果（APPLE）iPhone 4 16G版 3G手机（白色）W
   :brand_id => 1,
   :model => 'iPhone4',
   :rank => 10,
-  :price => 5880.00,
-  :spec =>
-  %{WCDMA/GSM},
+  :spec => %{WCDMA/GSM},
   :description =>
   %{One of the most popular mobile phone.},
-  :image_url =>   '/images/Products/iPhone4.jpg')
+  :image_url =>   '/images/Products/iPhone4.jpg',
+  :price => 5880.00)
