@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110804145840) do
+ActiveRecord::Schema.define(:version => 20110814084731) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -24,19 +24,6 @@ ActiveRecord::Schema.define(:version => 20110804145840) do
     t.string   "commenter"
     t.text     "body"
     t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mobile_phones", :force => true do |t|
-    t.string   "name"
-    t.integer  "brand_id"
-    t.string   "model"
-    t.integer  "rank"
-    t.decimal  "price"
-    t.text     "spec"
-    t.text     "description"
-    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,6 +43,10 @@ ActiveRecord::Schema.define(:version => 20110804145840) do
     t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "brand_id"
+    t.string   "model"
+    t.integer  "rank"
+    t.text     "spec"
   end
 
   create_table "tags", :force => true do |t|

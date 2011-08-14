@@ -1,3 +1,3 @@
 class Brand < ActiveRecord::Base
-  has_many :MobilePhone 
+  has_many :Products 
 end
