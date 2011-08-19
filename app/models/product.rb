@@ -8,6 +8,7 @@
 #---
 class Product < ActiveRecord::Base
   belongs_to :Brand
+  has_many :Tags
   default_scope :order => 'title'
   
   validates :title, :brand_id, :description, :image_url, :presence => true
