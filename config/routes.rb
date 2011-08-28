@@ -1,4 +1,10 @@
 Shopping::Application.routes.draw do
+  get "lab/index"
+  
+  controller :lab do 
+    post 'search' => :search
+  end
+
   resources :mobile_phones
 
   resources :brands

@@ -1,0 +1,25 @@
+<h3>查询结果</h3>
+<h4><%= @product_name%></h4>
+
+<table>
+<% @param_sections.each do |param_section| %>
+   <thead>
+    <tr><th><%= param_section.section_name%></th></tr>
+   </thead>
+   <tbody>
+	<% i = 0 %>
+     <% param_section.params.each do |param|%>
+   
+	   <% if i%2 == 0 %>
+	     <tr>
+	   <td><%= param %></td>
+	   <% else %>
+	   <td><%= param %></td>
+	   </tr>
+	   <% end %>
+	 
+	 <% i = i + 1 %>
+	 <% end %>
+   <tbody>
+<% end %>
+</table>

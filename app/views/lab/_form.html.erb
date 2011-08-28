@@ -1,0 +1,8 @@
+ <%= form_tag search_url do %>
+    <fieldset>
+	  <div>
+		<%= text_field_tag :product, params[:product]%>
+		<%= submit_tag "参数查询"%>
+	  </div>
+	</fieldset>
+  <% end %>
